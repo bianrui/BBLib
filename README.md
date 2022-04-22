@@ -19,10 +19,13 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'BBLib'
 ```
-
+未发布到 `CocoaPods` 需要指定资源地址
+```ruby
+pod 'BBLib', :git => 'https://github.com/bianrui/BBLib.git'
+```
 ## Author
 
-bianruifeng, 912736557@qq.com
+bianruifeng
 
 ## License
 

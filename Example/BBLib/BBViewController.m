@@ -7,7 +7,7 @@
 //
 
 #import "BBViewController.h"
-
+#import "BBSecondViewController.h"
 @interface BBViewController ()
 
 @end
@@ -18,8 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = UIColor.orangeColor;
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.navigationController pushViewController:[BBSecondViewController new] animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -23,6 +23,21 @@ pod 'BBLib'
 ```ruby
 pod 'BBLib', :git => 'https://github.com/bianrui/BBLib.git'
 ```
+在需要监听返回的viewcontroller 中加入
+```objective-c
+//在以下方法中需要自己手动做pop操作
+#pragma mark- BackButtonHandlerProtocol
+-(BOOL)bb_backGestureAction{
+    NSLog(@"右滑返回手势");
+    return NO;
+}
+
+- (BOOL)bb_backBarButtonItemDidClickAction {
+    NSLog(@"点击返回按钮");
+    return NO;
+}
+```
+如果监听方法没有执行，请将工程主要文件直接拖入项目。即可正常使用。
 ## Author
 
 bianruifeng
